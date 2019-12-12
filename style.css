@@ -1,0 +1,98 @@
+*{
+margin: 0;
+padding: 0;
+}
+body{
+width: 100vw;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.container{
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+justify-content: space-between;
+align-items: flex-start;
+background: rgb(252, 2, 2);
+height: 260px;
+width: 360px;
+}
+.container div{
+position: relative;
+background-color: rebeccapurple;
+width: 100px;
+height: 50px;
+margin-right: 10px;
+margin-left: 10px;
+margin-bottom: 20px;
+color: whitesmoke;
+font-size: 16px;
+text-align: center;
+transition: 3s, 1s;
+}
+@media screen and (min-width:800PX) and (max-width:1200PX) {
+div:nth-child(1),
+div:nth-child(3),
+div:nth-child(5),
+div:nth-child(7),
+div:nth-child(9),
+div:nth-child(11){
+width: 50px;
+height: 50px;
+transform: rotate(45deg);
+margin-left: 18px;
+}
+}
+@media screen and (min-width:400PX) and (max-width:800PX) {
+.container div:nth-child(3),
+div:nth-child(6),
+div:nth-child(9),
+div:nth-child(12){
+transform: scale(0.8);
+opacity: 0.5;
+}
+} 
+@media screen and (max-width:400PX) {
+.container{
+height: 400px;
+width: 240px;
+display: block;
+    }
+div{
+float: left;
+margin-right: 20px;
+margin-bottom: 20px;
+}
+.container .block1:hover{
+    left: -200px;
+}
+.container .block5 {
+    animation: animm5 2s linear infinite;
+}
+
+.container .block8 {
+    animation: animm8 2s linear infinite;
+}
+
+@keyframes animm5 {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes animm8 {
+    from {
+        transform: rotateX(0deg);
+    }
+
+    to {
+        transform: rotateX(360deg);
+    }
+}
+}
