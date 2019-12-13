@@ -15,7 +15,7 @@ flex-wrap: wrap;
 flex-direction: row;
 justify-content: space-between;
 align-items: flex-start;
-background: rgb(252, 2, 2);
+/* background: rgb(252, 2, 2); */
 height: 260px;
 width: 360px;
 }
@@ -30,7 +30,7 @@ margin-bottom: 20px;
 color: whitesmoke;
 font-size: 16px;
 text-align: center;
-transition: 3s, 1s;
+transition: 0.8s, 1s;
 }
 @media screen and (min-width:800PX) and (max-width:1200PX) {
 div:nth-child(1),
@@ -64,6 +64,9 @@ div{
 float: left;
 margin-right: 20px;
 margin-bottom: 20px;
+}
+.container .block1{
+    left: 0;
 }
 .container .block1:hover{
     left: -200px;
